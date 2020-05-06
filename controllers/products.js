@@ -17,10 +17,6 @@ exports.postProduct = function (req, res) {
 };
 
 exports.getProducts = function (req, res) {
-    console.log("coming here");
-        Product.find().then(
-        result => {
-            res.send(result);
-        }
-    )
+    console.log("coming here,", req.body);
+        res.send(req.body)
 }
